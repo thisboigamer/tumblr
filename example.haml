@@ -1,0 +1,37 @@
+%html
+  %head
+    %meta{charset:"utf-8"}
+    %meta{name:"viewport",content:"width=device-width,initial-scale=1.0"}
+    %title {Title}
+    %link{rel:"alternate",type:"application/rss+xml",href:"{RSS}"}
+    %link{rel:"stylesheet",href:"http://karlstolley.github.io/530-tumblr-example/screen.css"}
+  %body
+    %header#header
+      %h1 {Title}
+    %main#main
+      {block:Posts}
+      {block:Text}
+      %article
+        {block:Title}
+        %header
+          %h1
+            %a{href:"{Permalink}"} {Title}
+        {/block:Title}
+        .content {Body}
+        %footer
+          %ul
+            %li
+              %a{href:"{Permalink}"} Post Permalink
+            {block:HasTags}
+            %li Tagged
+              %ul
+                {block:Tags}
+                %li
+                  %a{href:"{TagURL}"} {Tag}
+                {/block:Tags}
+            {/block:HasTags}
+      {/block:Text}
+      {/block:Posts}
+    %footer#footer
+      %small
+        %a{href:"{RSS}"} RSS Feed
