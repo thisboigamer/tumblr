@@ -4,7 +4,7 @@
     %meta{name:"viewport",content:"width=device-width,initial-scale=1.0"}
     %title {Title}
     %link{rel:"alternate",type:"application/rss+xml",href:"{RSS}"}
-    %link{rel:"stylesheet",href:"http://thisboigamer.github.io/screen.css"}
+    %link{rel:"stylesheet",href:"http://thisboigamer.github.io/tumblr.css"}
   %body
     %header#header
       %h1 {Title}
@@ -23,15 +23,16 @@
         .content {Body}
       {/block:Text}
       {block:Photo}
-      %li{class:"post Photo"}
-        %img{src:"{PhotoURL-500}" alt:"{PhotoAlt}"}
+      %li.postPhoto
+        %img{src:"{PhotoURL-500}"
+          alt:"{PhotoAlt}"}
 
         {block:Caption}
         .caption {Caption}
         {/block:Caption}
       {/block:Photo}
       {block:Panorama}
-      %li{class:"post Panorama"}
+      %li.postPanorama
         {LinkOpenTag}
         %img{src:"{PhotoURL-Panorama}" alt:"{PhotoAlt}"}
         {LinkCloseTag}
@@ -40,28 +41,28 @@
         {/block:Caption}
       {/block:Panorama}
       {block:Photoset}
-      %li{class:"post Photoset"}
+      %li.postPhotoset
         {Photoset-500}
         {block:Caption}
         .caption {Caption}
         {/block:Caption}
       {/block:Photoset}
       {block:Quote}
-      %li{class:"post quote"}
+      %li.postQuote
         "{Quote}"
         {block:Source}
           .source {Source}
         {/block:Source}
       {/block:Quote}
       {block:Link}
-      %li{class:"post Link"}
+      %li.postLink
         %a{href:"{URL}" class:"link" target:"_blank"} {Name}
         {block:Description}
         .description {Description}
         {/block:Description}
       {/block:Link}
       {block:Chat}
-      %li{class:"post Chat"}
+      %li.postChat
         {block:Title}
         %h3
           %a{href:"{Permalink}"
@@ -77,14 +78,14 @@
           {/block:Lines}
       {/block:Chat}
       {block:Video}
-      %li{class:"post Video"}
+      %li.postVideo
         {Video-500}
           {block:Caption}
           .caption {Caption}
           {/block:Caption}
       {/block:Video}
       {block:Audio}
-      %li{class:"post Audio"}
+      %li.postAudio
         {AudioEmbed}
           {block:Caption}
           .caption {Caption}
@@ -96,7 +97,7 @@
               %a{href:"{Permalink}"} Post Permalink
             {block:HasTags}
             %li Tagged
-              %ul
+              %ul#tags
                 {block:Tags}
                 %li
                   %a{href:"{TagURL}"} {Tag}

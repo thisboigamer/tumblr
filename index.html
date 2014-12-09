@@ -4,7 +4,7 @@
     <meta name='viewport' content='width=device-width,initial-scale=1.0' />
     <title>{Title}</title>
     <link rel='alternate' type='application/rss+xml' href='{RSS}' />
-    <link rel='stylesheet' href='http://thisboigamer.github.io/screen.css' />
+    <link rel='stylesheet' href='http://thisboigamer.github.io/tumblr.css' />
   </head>
   <body>
     <header id='header'>
@@ -26,15 +26,15 @@
       </li>
       {/block:Text}
       {block:Photo}
-      <li class='post Photo'>
-        <img src="{PhotoURL-500}" alt:"{PhotoAlt}" />
+      <li class='postPhoto'>
+        <img src='{PhotoURL-500}" alt:"{PhotoAlt}' />
         {block:Caption}
         <div class='caption'>{Caption}</div>
         {/block:Caption}
       </li>
       {/block:Photo}
       {block:Panorama}
-      <li class='post Panorama'>
+      <li class='postPanorama'>
         {LinkOpenTag}
         <img src='{PhotoURL-Panorama}" alt:"{PhotoAlt}' />
         {LinkCloseTag}
@@ -44,7 +44,7 @@
       </li>
       {/block:Panorama}
       {block:Photoset}
-      <li class='post Photoset'>
+      <li class='postPhotoset'>
         {Photoset-500}
         {block:Caption}
         <div class='caption'>{Caption}</div>
@@ -52,7 +52,7 @@
       </li>
       {/block:Photoset}
       {block:Quote}
-      <li class='post quote'>
+      <li class='postQuote'>
         "{Quote}"
         {block:Source}
           <div class='source'>{Source}</div>
@@ -60,14 +60,15 @@
       </li>
       {/block:Quote}
       {block:Link}
-      <li class='post Link'>
+      <li class='postLink'>
         <a href='{URL}" class:"link" target:"_blank'>{Name} {block:Description}</a>
         <div class='description'>{Description}</div>
         {/block:Description}
       </li>
       {/block:Link}
       {block:Chat}
-      <li class='post Chat'>{block:Title}
+      <li class='postChat'>
+        {block:Title}
         <h3>
           <a href='{Permalink}'>
             {Title}
@@ -85,7 +86,7 @@
       </li>
       {/block:Chat}
       {block:Video}
-      <li class='post Video'>
+      <li class='postVideo'>
         {Video-500}
           {block:Caption}
           <div class='caption'>{Caption}</div>
@@ -93,7 +94,7 @@
       </li>
       {/block:Video}
       {block:Audio}
-      <li class='post Audio'>
+      <li class='postAudio'>
         {AudioEmbed}
           {block:Caption}
           <div class='caption'>{Caption}</div>
@@ -107,7 +108,7 @@
             </li>
             {block:HasTags}
             <li>Tagged
-              <ul>
+              <ul id='tags'>
                 {block:Tags}
                 <li>
                   <a href='{TagURL}'>{Tag}</a>
