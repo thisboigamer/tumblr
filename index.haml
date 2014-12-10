@@ -107,6 +107,9 @@
             %ul
               %li
                 %a{href:"{Permalink}"} Post Permalink
+              {block:Date}
+              {/block:Date}
+              %li {Month} {DayOfMonth}, {Year}
               {block:HasTags}
               %li Tagged
                 %ul#tags
