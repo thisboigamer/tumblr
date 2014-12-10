@@ -12,115 +12,118 @@
       <p id='description'>{Description}</p>
       {/block:Description}
     </header>
-    <ul id='posts'>
-      {block:Posts}
-      {block:Text}
-      <li class='post Text'>{block:Title}
-        <header>
+    <article>
+      <ul id='posts'>
+        {block:Posts}
+        {block:Text}
+        <li class='postText'>
+          {block:Title}
+          <header>
+            <h3>
+              <a href='{Permalink}'>{Title}</a>
+            </h3>
+          </header>
+          {/block:Title}
+          <div class='content'>{Body}</div>
+        </li>
+        {/block:Text}
+        {block:Photo}
+        <li class='postPhoto'>
+          <img src='{PhotoURL-250}" alt:"{PhotoAlt}' />
+          {block:Caption}
+          <div class='caption'>{Caption}</div>
+          {/block:Caption}
+        </li>
+        {/block:Photo}
+        {block:Panorama}
+        <li class='postPanorama'>
+          {LinkOpenTag}
+          <img src='{PhotoURL-Panorama}" alt:"{PhotoAlt}' />
+          {LinkCloseTag}
+          {block:Caption}
+          <div class='caption'>{Caption}</div>
+          {/block:Caption}
+        </li>
+        {/block:Panorama}
+        {block:Photoset}
+        <li class='postPhotoset'>
+          {Photoset-250}
+          {block:Caption}
+          <div class='caption'>{Caption}</div>
+          {/block:Caption}
+        </li>
+        {/block:Photoset}
+        {block:Quote}
+        <li class='postQuote'>
+          "{Quote}"
+          {block:Source}
+            <div class='source'>{Source}</div>
+          {/block:Source}
+        </li>
+        {/block:Quote}
+        {block:Link}
+        <li class='postLink'>
+          <a href='{URL}" class:"link" target:"_blank'>{Name} {block:Description}</a>
+          <div class='description'>{Description}</div>
+          {/block:Description}
+        </li>
+        {/block:Link}
+        {block:Chat}
+        <li class='postChat'>
+          {block:Title}
           <h3>
-            <a href='{Permalink}'>{Title}</a>
+            <a href='{Permalink}'>
+              {Title}
+            </a>
           </h3>
-        </header>
-        {/block:Title}
-        <div class='content'>{Body}</div>
-      </li>
-      {/block:Text}
-      {block:Photo}
-      <li class='postPhoto'>
-        <img src='{PhotoURL-500}" alt:"{PhotoAlt}' />
-        {block:Caption}
-        <div class='caption'>{Caption}</div>
-        {/block:Caption}
-      </li>
-      {/block:Photo}
-      {block:Panorama}
-      <li class='postPanorama'>
-        {LinkOpenTag}
-        <img src='{PhotoURL-Panorama}" alt:"{PhotoAlt}' />
-        {LinkCloseTag}
-        {block:Caption}
-        <div class='caption'>{Caption}</div>
-        {/block:Caption}
-      </li>
-      {/block:Panorama}
-      {block:Photoset}
-      <li class='postPhotoset'>
-        {Photoset-500}
-        {block:Caption}
-        <div class='caption'>{Caption}</div>
-        {/block:Caption}
-      </li>
-      {/block:Photoset}
-      {block:Quote}
-      <li class='postQuote'>
-        "{Quote}"
-        {block:Source}
-          <div class='source'>{Source}</div>
-        {/block:Source}
-      </li>
-      {/block:Quote}
-      {block:Link}
-      <li class='postLink'>
-        <a href='{URL}" class:"link" target:"_blank'>{Name} {block:Description}</a>
-        <div class='description'>{Description}</div>
-        {/block:Description}
-      </li>
-      {/block:Link}
-      {block:Chat}
-      <li class='postChat'>
-        {block:Title}
-        <h3>
-          <a href='{Permalink}'>
-            {Title}
-          </a>
-        </h3>
-        {/block:Title}
-        <ul class='chat'>
-          {block:Lines}
-          <li class='{Alt} user_{UserNumber}'>{block:Label}
-            <span class='label'>{Label} {/block:Label}</span>
-            {Line}
-          </li>
-          {/block:Lines}
-        </ul>
-      </li>
-      {/block:Chat}
-      {block:Video}
-      <li class='postVideo'>
-        {Video-500}
-          {block:Caption}
-          <div class='caption'>{Caption}</div>
-          {/block:Caption}
-      </li>
-      {/block:Video}
-      {block:Audio}
-      <li class='postAudio'>
-        {AudioEmbed}
-          {block:Caption}
-          <div class='caption'>{Caption}</div>
-          {/block:Caption}
-      </li>
-      {/block:Audio}
-        <footer>
-          <ul>
-            <li>
-              <a href='{Permalink}'>Post Permalink</a>
+          {/block:Title}
+          <ul class='chat'>
+            {block:Lines}
+            <li class='{Alt} user_{UserNumber}'>{block:Label}
+              <span class='label'>{Label} {/block:Label}</span>
+              {Line}
             </li>
-            {block:HasTags}
-            <li>Tagged
-              <ul id='tags'>
-                {block:Tags}
-                <li>
-                  <a href='{TagURL}'>{Tag}</a>
-                </li>
-                {/block:Tags}
-              </ul>
-            </li>
-            {/block:HasTags}
+            {/block:Lines}
           </ul>
-        </footer>
-      {/block:Posts}
-    </ul>
+        </li>
+        {/block:Chat}
+        {block:Video}
+        <li class='postVideo'>
+          {Video-250}
+            {block:Caption}
+            <div class='caption'>{Caption}</div>
+            {/block:Caption}
+        </li>
+        {/block:Video}
+        {block:Audio}
+        <li class='postAudio'>
+          {AudioEmbed-250}
+            {block:Caption}
+            <div class='caption'>{Caption}</div>
+            {/block:Caption}
+        </li>
+        {/block:Audio}
+          <footer>
+            <ul>
+              <li>
+                <a href='{Permalink}'>Post Permalink</a>
+              </li>
+              {block:HasTags}
+              <li>Tagged
+                <ul id='tags'>
+                  {block:Tags}
+                  <li>
+                    <a href='{TagURL}'>{Tag}</a>
+                  </li>
+                  {/block:Tags}
+                </ul>
+              </li>
+              {/block:HasTags}
+            </ul>
+          </footer>
+        {/block:Posts}
+      </ul>
+    </article>
     <footer id='footer'>
       <small>
         <a href='{RSS}'>RSS Feed</a>

@@ -11,99 +11,100 @@
       {block:Description}
       %p#description {Description}
       {/block:Description}
-    %ul#posts
-      {block:Posts}
-      {block:Text}
-      %li{class:"post Text"}
-        {block:Title}
-        %header
-          %h3
-            %a{href:"{Permalink}"} {Title}
-        {/block:Title}
-        .content {Body}
-      {/block:Text}
-      {block:Photo}
-      %li.postPhoto
-        %img{src:"{PhotoURL-500}"
-          alt:"{PhotoAlt}"}
+    %article
+      %ul#posts
+        {block:Posts}
+        {block:Text}
+        %li.postText
+          {block:Title}
+          %header
+            %h3
+              %a{href:"{Permalink}"} {Title}
+          {/block:Title}
+          .content {Body}
+        {/block:Text}
+        {block:Photo}
+        %li.postPhoto
+          %img{src:"{PhotoURL-250}"
+            alt:"{PhotoAlt}"}
 
-        {block:Caption}
-        .caption {Caption}
-        {/block:Caption}
-      {/block:Photo}
-      {block:Panorama}
-      %li.postPanorama
-        {LinkOpenTag}
-        %img{src:"{PhotoURL-Panorama}" alt:"{PhotoAlt}"}
-        {LinkCloseTag}
-        {block:Caption}
-        .caption {Caption}
-        {/block:Caption}
-      {/block:Panorama}
-      {block:Photoset}
-      %li.postPhotoset
-        {Photoset-500}
-        {block:Caption}
-        .caption {Caption}
-        {/block:Caption}
-      {/block:Photoset}
-      {block:Quote}
-      %li.postQuote
-        "{Quote}"
-        {block:Source}
-          .source {Source}
-        {/block:Source}
-      {/block:Quote}
-      {block:Link}
-      %li.postLink
-        %a{href:"{URL}" class:"link" target:"_blank"} {Name}
-        {block:Description}
-        .description {Description}
-        {/block:Description}
-      {/block:Link}
-      {block:Chat}
-      %li.postChat
-        {block:Title}
-        %h3
-          %a{href:"{Permalink}"
-            {Title}
-        {/block:Title}
-        %ul.chat
-          {block:Lines}
-          %li{class:"{Alt} user_{UserNumber}"}
-            {block:Label}
-            %span.label {Label}
-            {/block:Label}
-            {Line}
-          {/block:Lines}
-      {/block:Chat}
-      {block:Video}
-      %li.postVideo
-        {Video-500}
           {block:Caption}
           .caption {Caption}
           {/block:Caption}
-      {/block:Video}
-      {block:Audio}
-      %li.postAudio
-        {AudioEmbed}
+        {/block:Photo}
+        {block:Panorama}
+        %li.postPanorama
+          {LinkOpenTag}
+          %img{src:"{PhotoURL-Panorama}" alt:"{PhotoAlt}"}
+          {LinkCloseTag}
           {block:Caption}
           .caption {Caption}
           {/block:Caption}
-      {/block:Audio}
-        %footer
-          %ul
-            %li
-              %a{href:"{Permalink}"} Post Permalink
-            {block:HasTags}
-            %li Tagged
-              %ul#tags
-                {block:Tags}
-                %li
-                  %a{href:"{TagURL}"} {Tag}
-                {/block:Tags}
-            {/block:HasTags}
-      {/block:Posts}
+        {/block:Panorama}
+        {block:Photoset}
+        %li.postPhotoset
+          {Photoset-250}
+          {block:Caption}
+          .caption {Caption}
+          {/block:Caption}
+        {/block:Photoset}
+        {block:Quote}
+        %li.postQuote
+          "{Quote}"
+          {block:Source}
+            .source {Source}
+          {/block:Source}
+        {/block:Quote}
+        {block:Link}
+        %li.postLink
+          %a{href:"{URL}" class:"link" target:"_blank"} {Name}
+          {block:Description}
+          .description {Description}
+          {/block:Description}
+        {/block:Link}
+        {block:Chat}
+        %li.postChat
+          {block:Title}
+          %h3
+            %a{href:"{Permalink}"
+              {Title}
+          {/block:Title}
+          %ul.chat
+            {block:Lines}
+            %li{class:"{Alt} user_{UserNumber}"}
+              {block:Label}
+              %span.label {Label}
+              {/block:Label}
+              {Line}
+            {/block:Lines}
+        {/block:Chat}
+        {block:Video}
+        %li.postVideo
+          {Video-250}
+            {block:Caption}
+            .caption {Caption}
+            {/block:Caption}
+        {/block:Video}
+        {block:Audio}
+        %li.postAudio
+          {AudioEmbed-250}
+            {block:Caption}
+            .caption {Caption}
+            {/block:Caption}
+        {/block:Audio}
+          %footer
+            %ul
+              %li
+                %a{href:"{Permalink}"} Post Permalink
+              {block:HasTags}
+              %li Tagged
+                %ul#tags
+                  {block:Tags}
+                  %li
+                    %a{href:"{TagURL}"} {Tag}
+                  {/block:Tags}
+              {/block:HasTags}
+        {/block:Posts}
     %footer#footer
       %small
         %a{href:"{RSS}"} RSS Feed
