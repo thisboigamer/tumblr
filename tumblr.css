@@ -1,0 +1,343 @@
+/*
+=================================================
+YUI 3.17.2 (build 9c3c78e)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+=================================================
+Stolley, Karl
+ks4.us/530
+Header buttons examined and revamped
+=================================================
+*/
+
+html{color:#000;background:black}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+html {
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	line-height: 1.125em;
+	font-size: 1.125em;
+}
+
+/*
+====================================
+Golden Scale:
+18px = 1em
+1 px = .056em
+====================================
+*/
+
+/* BODY */
+
+html{
+  color: white;
+  background-color: black;
+}
+
+header{
+
+  max-width: 70em;
+  margin: 0 auto 0 auto;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2.427em;
+	font-family: Monaco, Consolas, Lucida Console, monospace;
+	line-height: 1.125em;
+	color: #3CB371;
+  text-align: center;
+  margin-top: .49em;
+  font-variant: small-caps;
+
+  }
+
+
+h2 {
+  font-size: 1.82em;
+  line-height: 1.125em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: Monaco, Consolas, Lucida Console, monospace;;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  margin: .49em .49em 0 .49em;
+  line-height:1.5em;
+  font-size: 1.82em;
+  font-family: Monaco, Consolas, Lucida Console, monospace;
+
+  }
+
+h4 {
+  font-style: italic;
+  font-family:  Monaco, Consolas, Lucida Console, monospace;
+  line-height: 1.125em;
+  font-size: 1.125em;
+  margin-left: .824em;
+  margin-top: .824em;
+  margin-bottom: .49em;
+}
+
+h5 {
+  font-variant: small-caps;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  font-size: 1.125em;
+  margin-left: .824em;
+  margin-top: .824em;
+  margin-bottom: .49em;
+
+}
+
+
+p {
+	font-size: 1.125em;
+	line-height: 1.618em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 90%;
+	padding: .49em;
+	margin-left: 1em;
+	float: left;
+}
+
+fieldset, img {
+    border: 0 none;
+    margin: 1em;
+}
+
+strong {
+  font-style: italic;
+}
+
+a{
+  line-height: 1.82em;
+  font-size:1.125em;
+  font-family: Monaco, Consolas, Lucida Console, monospace;
+  color : #3CB371;
+  }
+
+a:hover {
+  color : white;
+  }
+
+ul {
+  font-size: 1em;
+  line-height: 1.618em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 90%;
+	margin-left: 1.82em;
+	list-style: square outside none;
+  }
+
+
+article .postText header h3 a{
+  color: black;
+  font-size: 1em;
+  max-width: 20em;
+}
+
+
+/* LAYOUT RULES */
+#navigation {
+  line-height: 1em;
+  width:75%;
+  max-width: 40em;
+  margin: 0 auto 1.618em auto;
+  }
+
+#navigation li {
+  background-color: #3CB371;
+  width: 90%;
+  display: block;
+  margin-left: .49em;
+  max-width: 30em;
+  margin-bottom: .49em;
+  color: black;
+}
+
+#navigation a {
+  display: inline-block;
+  color: #000;
+  width: 90%;
+  padding-left: .268em;
+  font-size: 1em;
+  font-family: Monaco, Consolas, Lucida Console, monospace;
+  max-width: 30em;
+  padding-right: 3em;
+  }
+
+header #description {
+  font-size: 1.125em;
+  line-height: 1.125em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: Monaco, Consolas, Lucida Console, monospace;;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#posts {
+  display: block;
+  margin: .5em;
+  width: 90%;
+  max-width: 33em;
+
+}
+#posts li{
+  display: inline-block;
+  background-color: #3CB371;
+  width: 90%;
+  max-width: 50em;
+  float: left;
+  margin-right: 3em;
+  margin-bottom: 2em;
+
+}
+
+#posts footer {
+  background-color: black;
+  margin-bottom: 5em;
+}
+
+#posts footer li {
+  display: inline-block;
+  width: 90%;
+  max-width: 15em;
+  background-color: black;
+  margin-bottom: .2em;
+}
+#posts footer #tags {
+   display: inline-block;
+   font-size: .69em;
+   margin-bottom: .2em;
+}
+
+#footer{
+float: none;
+top: 0em;
+position: absolute;
+margin-left: .618em;
+}
+
+#posts li #caption li {
+  margin-bottom: .3em;
+}
+
+
+
+/* MODULES  */
+
+
+
+.caption p a{
+  color:black;
+}
+
+.caption p{
+  margin: 0em;
+}
+
+.postQuote {
+  font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
+  font-style: italic;
+  padding-top: 2em;
+  padding-bottom:2.5em;
+  text-align:center;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1.3em;
+}
+
+.postQuote .source {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: none;
+  font-size: 1em;
+}
+
+
+
+
+/* STATES */
+/* Media Queries */
+
+@media screen and (min-width: 33.333em) {
+  #navigation{
+  width:auto;
+  max-width: 40em;
+  margin: 0 auto 1em auto;
+  }
+
+  #navigation li {
+  display: inline-block;
+  width: auto;
+  max-width: 15em;
+  }
+
+
+
+  h3{
+    margin-left: 2.618em;
+  }
+  h4{
+    margin-left: 4.223em;
+  }
+  h5{
+    margin-left: 4.223em;
+  }
+  p{
+    width:75%;
+    max-width: 30em;
+    margin-left: 4.223em;
+  }
+  #posts{
+    max-width: 100em;
+  }
+  .caption {
+    float: left;
+    width: 60%;
+    max-width: 12em;
+    margin: 3em;
+  }
+  .postQuote p{
+  max-width:90%
+  }
+  iframe, img {
+    margin: 1em;
+    margin-left: 4 em;
+    }
+
+}
+
+@media screen and (min-width: 67em){
+  #posts {
+    width: 75%;
+    max-width: 100em;
+  }
+  #posts footer li{
+    display: block;
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 78em) {
+
+
+
+}
+
+@media screen and (min-width: 116em) {
+}
