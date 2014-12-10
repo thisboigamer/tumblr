@@ -11,6 +11,15 @@
       {block:Description}
       %h2#description {Description}
       {/block:Description}
+      %ul#navigation
+        %li
+          %a{href:"http://thisboigamer.github.io"} Website
+        %li
+          %a{href:"http://thisboigamer.github.io/cv.html"} Curriculum Vitae
+        %li
+          %a{href:"http://michaeldeanda.tumblr.com/ask"} Contact Me
+        %li
+          %a{href:"/archive"} Archive
     %article
       %ul#posts
         {block:Posts}
@@ -119,6 +128,7 @@
                   {/block:Tags}
               {/block:HasTags}
         {/block:Posts}
+
     %footer#footer
       %small
         %a{href:"{RSS}"} RSS Feed
