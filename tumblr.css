@@ -179,7 +179,7 @@ header #description {
   line-height: 1.125em;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-family: Monaco, Consolas, Lucida Console, monospace;;
+  font-family: Monaco, Consolas, Lucida Console, monospace;
   font-weight: bold;
   background-color: black;
   color: white;
@@ -189,7 +189,7 @@ header #description {
 #posts {
   display: block;
   margin: .5em;
-  width: 90%;
+  width: 95%;
   max-width: 33em;
 
 }
