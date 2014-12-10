@@ -9,7 +9,7 @@
     %header#header
       %h1 {Title}
       {block:Description}
-      %p#description {Description}
+      %h2#description {Description}
       {/block:Description}
     %article
       %ul#posts
@@ -89,7 +89,18 @@
         %li.postAudio
           {AudioEmbed-250}
             {block:Caption}
-            .caption {Caption}
+            %ul.caption
+              %li Jamming To:
+              {block:TrackName}
+              %li {TrackName}
+              {/block:TrackName}
+              {block:Artist}
+              %li {Artist}
+              {/block:Artist}
+              {block:Album}
+              %li {Album}
+              {/block:Album}
+              {Caption}
             {/block:Caption}
         {/block:Audio}
           %footer

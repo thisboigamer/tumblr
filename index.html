@@ -9,7 +9,7 @@
   <body>
     <header id='header'>
       <h1>{Title} {block:Description}</h1>
-      <p id='description'>{Description}</p>
+      <h2 id='description'>{Description}</h2>
       {/block:Description}
     </header>
     <article>
@@ -29,7 +29,7 @@
         {/block:Text}
         {block:Photo}
         <li class='postPhoto'>
-          <img src="{PhotoURL-250}" alt:"{PhotoAlt}" />
+          <img src='{PhotoURL-250}" alt:"{PhotoAlt}' />
           {block:Caption}
           <div class='caption'>{Caption}</div>
           {/block:Caption}
@@ -38,7 +38,7 @@
         {block:Panorama}
         <li class='postPanorama'>
           {LinkOpenTag}
-          <img src="{PhotoURL-Panorama}" alt:"{PhotoAlt}" />
+          <img src='{PhotoURL-Panorama}" alt:"{PhotoAlt}' />
           {LinkCloseTag}
           {block:Caption}
           <div class='caption'>{Caption}</div>
@@ -99,7 +99,19 @@
         <li class='postAudio'>
           {AudioEmbed-250}
             {block:Caption}
-            <div class='caption'>{Caption}</div>
+            <ul class='caption'>
+              <li>Jamming To:</li>
+              {block:TrackName}
+              <li>{TrackName}</li>
+              {/block:TrackName}
+              {block:Artist}
+              <li>{Artist}</li>
+              {/block:Artist}
+              {block:Album}
+              <li>{Album}</li>
+              {/block:Album}
+              {Caption}
+            </ul>
             {/block:Caption}
         </li>
         {/block:Audio}
